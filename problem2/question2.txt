@@ -1,0 +1,4 @@
+count_threshold_cv: là biến điều kiện, được sử dụng trong các hàm pthread_cond_...(). Trong trường hợp cụ thể là bài này thì count_threshold_cv được dùng trong cơ chế giúp thread 1 có thể "wait" được thread 2 và thread 3 tăng biến count lên đến 20 sau đó "signal" để thread 1 thực thi tiếp tục.
+
+count_mutex: là biến mutex lock, được dùng trong những hàm pthread_mutex_...() và pthread_cond_wait(). Trong bài này thì count_mutex dùng để bảo vệ biến count (critical section).
+

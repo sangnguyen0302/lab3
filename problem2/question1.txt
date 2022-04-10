@@ -1,0 +1,11 @@
+- cond_usg.c:
+ 	+ các luồng thực thi đúng, không bị sai lệch giá trị do race condition. 
+	+ Output cho thấy rằng thread 1 sẽ đợi để thread 2 và thread 3 lần lượt tăng giá trị của biến count lên đến 20 rồi mới tiếp tục thực thi.
+	Sau đó thread 2 và thread 3 sẽ lần lượt tăng biến count lên cho đến khi vòng lặp trong chúng thực hiện đủ số lần TCOUNT(100). 
+	+ Kết quả cuối cùng cho kết quả chính xác là 290.
+
+- nosynch.c:
+	+ Chương trình chạy không theo đúng luồng mà chúng ta muốn, có xảy ra race condition.
+	+ Output từ các thread không đúng vì chưa đồng bộ
+	+ Kết quả cuối cùng nhỏ hơn 290 do race condition.
+ 
